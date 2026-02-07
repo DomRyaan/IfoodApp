@@ -3,6 +3,14 @@
     <style name="Base.Theme.IfoodReplica" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="android:windowBackground">#FFFFFF</item>
+    </style>
+
+    <style name="NoIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="colorSecondaryContainer">@android:color/transparent</item>
+        <item name="android:width">0dp</item>
+        <item name="android:height">0dp</item>
     </style>
 
     <style name="Theme.IfoodReplica" parent="Base.Theme.IfoodReplica" />

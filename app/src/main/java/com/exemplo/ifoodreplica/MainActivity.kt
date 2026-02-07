@@ -5,9 +5,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.viewpager2.widget.ViewPager2
-import com.google.android.material.tabs.TabLayout
-import com.google.android.material.tabs.TabLayoutMediator
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.navigation.fragment.NavHostFragment;
+import androidx.navigation.ui.setupWithNavController
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,20 +20,12 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        val viewPager: ViewPager2 = findViewById(R.id.slide)
-        val tabLayout: TabLayout = findViewById(R.id.tabs)
+        // Nota: É mais seguro pegar o NavController através do FragmentManager
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment
 
-        // Instancia do Adpater
-        val adapter = SlidesAdapter(this)
+        val navController = navHostFragment.navController
 
-        // Defini o adapter do viewpager
-        viewPager.adapter = adapter
-
-        // Conecta o TabLayout com o viewPager2 para criar os pontinhos
-        TabLayoutMediator(tabLayout, viewPager) {
-            tab, position ->
-            // Não precisa fazer nada, o tabLayout vai gerar os pontinhos automaticamente
-        }.attach()
-
+        val navView: BottomNavigationView = findViewById(R.id.nav_view)
+        navView.setupWithNavController(navController)
     }
 }

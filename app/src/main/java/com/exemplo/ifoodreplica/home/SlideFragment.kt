@@ -1,12 +1,11 @@
-package com.exemplo.ifoodreplica
+package com.exemplo.ifoodreplica.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
+import com.exemplo.ifoodreplica.R
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -40,23 +39,15 @@ class SlideFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_slide, container, false)
 
         // Pega os dados passados para o fragment
-        val txtTop = arguments?.getString("ARG_TEXT_TOP")
-        val txtBottom = arguments?.getString("ARG_TEXT_BOTTOM")
-        val txtSide = arguments?.getString("ARG_TEXT_SIDE")
-        val txtView = arguments?.getString("ARG_TEXT_VIEW")
+        var cardBackground = arguments?.getInt("ARG_CARD")
 
 
         // Econtra as view do layout
-        val textTop: TextView = view.findViewById(R.id.text_top)
-        val textBottom: TextView = view.findViewById(R.id.text_bottom)
-        val textSide: TextView = view.findViewById(R.id.text_side)
-        val textOnView: TextView = view.findViewById(R.id.text_in_view)
+        val card = view.findViewById<View>(R.id.background_card)
 
-        textTop.text = txtTop
-        textBottom.text = txtBottom
-        textSide.text = txtSide
-        textOnView.text = txtView
-
+        cardBackground?.let {
+            card.setBackgroundResource(it)
+        }
 
         return view
     }
@@ -72,13 +63,10 @@ class SlideFragment : Fragment() {
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance(textTop: String, textBottom: String, textSide: String, textView: String): SlideFragment {
+        fun newInstance(cardBackground: Int): SlideFragment {
             val fragment = SlideFragment()
             val args = Bundle().apply {
-                putString("ARG_TEXT_TOP", textTop)
-                putString("ARG_TEXT_BOTTOM", textBottom)
-                putString("ARG_TEXT_SIDE", textSide)
-                putString("ARG_TEXT_VIEW", textView)
+                putInt("ARG_CARD", cardBackground)
             }
 
             fragment.arguments = args

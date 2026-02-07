@@ -1,38 +1,24 @@
-package com.exemplo.ifoodreplica
+package com.exemplo.ifoodreplica.home
 
-import android.transition.Slide
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.exemplo.ifoodreplica.R
 
 // O Adapter herda de FragmentStateAdapter, que é feito para usar com Fragments no ViewPager2
 // Ele recebe a Activity como parâmetro para gerenciar o ciclo de vida dos fragments
-class SlidesAdapter(activity: AppCompatActivity) : FragmentStateAdapter(activity) {
+class SlidesAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
 
     private val pages = listOf(
         SlideFragment.newInstance(
-            "Restaurantes",
-            "Pagamento",
-            "com",
-            "Na Entrega"
+            R.drawable.background_view3
         ),
         SlideFragment.newInstance(
-            "Restaurantes",
-            "Pagamentos",
-            "com",
-            "Em Casa"
+            R.drawable.background_view2
         ),
         SlideFragment.newInstance(
-            "Restaurantes",
-            "Pagamentos",
-            "com",
-            "Na Entrega"
-        ),
-        SlideFragment.newInstance(
-            "Restaurantes",
-            "Pagamentos",
-            "com",
-            "Em Casa"
+            R.drawable.background_view1
         )
     )
 
