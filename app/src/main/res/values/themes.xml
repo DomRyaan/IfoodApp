@@ -4,6 +4,10 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="colorOnPrimary">@color/black</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:windowBackground">#FFFFFF</item>
     </style>
 
@@ -11,6 +15,11 @@
         <item name="colorSecondaryContainer">@android:color/transparent</item>
         <item name="android:width">0dp</item>
         <item name="android:height">0dp</item>
+    </style>
+
+    <style name="ImagemRedonda" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
     </style>
 
     <style name="Theme.IfoodReplica" parent="Base.Theme.IfoodReplica" />
