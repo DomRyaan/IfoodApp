@@ -24,9 +24,9 @@ Este projeto foi construído utilizando um conjunto de ferramentas modernas e es
 
 #### 📸 Screenshots
 
-|             Tela de Início             |                 Buscas                 |                 Pedidos                 |            Perfil do Usuário             |
-|:--------------------------------------:|:--------------------------------------:|:---------------------------------------:|:----------------------------------------:|
-| <img src="img/inicio.jpg" width="200"> | <img src="img/search.jpg" width="200"> | <img src="img/pedidos.jpg" width="200"> | <img src="img/perfil 1.jpg" width="200"> |
+|             Tela de Início             |                 Buscas                 |                 Pedidos                 |           Perfil do Usuário            |
+|:--------------------------------------:|:--------------------------------------:|:---------------------------------------:|:--------------------------------------:|
+| <img src="img/inicio.jpg" width="200"> | <img src="img/search.jpg" width="200"> | <img src="img/pedidos.jpg" width="200"> | <img src="img/perfil.jpg" width="200"> |
 
 
 
